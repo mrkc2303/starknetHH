@@ -48,10 +48,10 @@ const Inventory = () => {
       try {
         // const walletAddr = "0x037f92b675A8909f4f36317F31fd789ac0097E0af50C9df8D6080e7adeA4832C";
         const walletAddr = "0x06f36e8a0fc06518125bbb1c63553e8a7d8597d437f9d56d891b8c7d3c977716"
-        const response= await axios.get(
-          `https://starknet-goerli.g.alchemy.com/nft/v2/o7Q1nA6TXhKL52ugjoD-QNMlZV-GFaJt/getNFTs?owner=${walletAddr}&withMetadata=true&pageSize=100`
+        const dataJson= await axios.get(
+          `https://starknet-goerli.g.alchemy.com/nft/v2/${process.env.API_ALCHEMY}/getNFTs?owner=${walletAddr}&withMetadata=true&pageSize=100`
         );
-        console.log(response);
+        console.log(dataJson);
         // const response= await axios.get(
         //   `https://api.ghostnet.tzkt.io/v1/contracts/KT1RyU6sq5uPLeg5HqpQjccL6czVux8q1T7e/bigmaps/data/keys`
         // );
