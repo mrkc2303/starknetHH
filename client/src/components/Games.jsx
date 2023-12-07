@@ -82,6 +82,15 @@ const Games = () => {
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = gamedata.slice(indexOfFirstPost, indexOfLastPost);
+  const newPost = {
+    "header":'Valorant',
+    "description":"Valorant is a team-based first-person tactical hero shooter set in the near future. Players play as one of a set of Agents, characters based on several countries and cultures around the world. In the main game mode, players are assigned to either the attacking or defending team with each team having five players on it. ",
+    "id":"0.001",
+    "holder":"0x037f92b675A8909f4f36317F31fd789ac0097E0af50C9df8D6080e7adeA4832C",
+    "image":"https://res.cloudinary.com/dwwcryioj/image/upload/v1701932282/nh1v5johdkzqztv3xar0.webp",
+    "isDiff":"false",
+    "token_id":"1",
+  };
 
   // Change page
   const paginateFront = () => setCurrentPage(currentPage + 1);
@@ -94,6 +103,16 @@ const Games = () => {
       {/* <Carousel array={gamedata} /> */}
       <Categories />
       <div className='grid grid-cols-4 gap-5 width-[100vw]'>
+      {/* <Card 
+          key="3"
+          header="Valorant"
+          description="ABCDEFC"
+          id="3"
+          rating="9.5"
+          image="https://res.cloudinary.com/dwwcryioj/image/upload/v1701932282/nh1v5johdkzqztv3xar0.webp"
+          isDiff={true}
+          
+         /> */}
       <RenderCards data={currentPosts} />
        
      

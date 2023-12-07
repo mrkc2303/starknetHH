@@ -8,8 +8,8 @@ const Marketplace = () => {
     <div>
     
       <Header />
-      <Inventory />
       <FetchNFT />
+      <Inventory />
     </div>
   )
 }

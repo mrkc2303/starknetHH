@@ -24,11 +24,13 @@ const Card = ({
 
   useEffect(() => {
     const getUrl = async () => {
-      const prevurl = "https://ipfs.io/ipfs/" + newimage.replace("ipfs://", "");
-      const response = await axios.get(prevurl);
-      const newurl = await response.data;
-      console.log(newurl);
-      setUrl(newurl);
+      if(url !== "https://res.cloudinary.com/dwwcryioj/image/upload/v1701932282/nh1v5johdkzqztv3xar0.webp") {
+        const prevurl = "https://ipfs.io/ipfs/" + newimage.replace("ipfs://", "");
+        const response = await axios.get(prevurl);
+        const newurl = await response.data;
+        console.log(newurl);
+        setUrl(newurl);
+      }
     };
     getUrl();
   }, [newimage]);
@@ -138,6 +140,10 @@ const Card = ({
 
     // transferNFT(object)
   };
+
+  // if(testImage != "") {
+  //   newUrl = testImage;
+  // }
 
   // console.log(newimage)
   return (
